@@ -3,27 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin", "Services\Security\Admin\Admin.csproj", "{2445DF57-A55B-4D96-89F0-3775CB6891F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.API", "Services\Admin\Admin.API\Admin.API.csproj", "{2445DF57-A55B-4D96-89F0-3775CB6891F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbLogger", "Shared\DbLogger\DbLogger.csproj", "{17EBBBD8-7E96-426F-A6C7-ABE5275237B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Services\Security\Domain\Domain.csproj", "{3308C613-8CD1-4256-BA42-11DC235C64E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.Domain", "Services\Admin\Admin.Domain\Admin.Domain.csproj", "{3308C613-8CD1-4256-BA42-11DC235C64E4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Localization", "Shared\Localization\Localization.csproj", "{377182E9-A297-41CD-BCC3-E7CC9E4F7502}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Services\Security\Persistence\Persistence.csproj", "{3E6B8937-D7C5-4F72-87ED-FAFCCB0EF906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.Persistence", "Services\Admin\Admin.Persistence\Admin.Persistence.csproj", "{3E6B8937-D7C5-4F72-87ED-FAFCCB0EF906}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resources", "Shared\Resources\Resources.csproj", "{9B610BB5-FC1F-4D7E-B7E1-9D415A061ABF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Security\Services\Services.csproj", "{1FCE0407-BB8B-4108-8092-53D5FD3EFA10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.Services", "Services\Admin\Admin.Services\Admin.Services.csproj", "{1FCE0407-BB8B-4108-8092-53D5FD3EFA10}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Abstractions", "Services\Security\Services.Abstractions\Services.Abstractions.csproj", "{A8CF0084-8E00-4CFC-B5DE-7C745C378DDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.Services.Abstractions", "Services\Admin\Admin.Services.Abstractions\Admin.Services.Abstractions.csproj", "{A8CF0084-8E00-4CFC-B5DE-7C745C378DDE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBase", "Shared\BuildingBase\BuildingBase.csproj", "{4106CF15-BBC4-4A45-9239-C8F36EB44538}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{700D8C48-80E3-4885-848E-42D461BDAB5B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{E6B5E5C9-142F-4FDD-8721-BEAFB1530638}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{E6B5E5C9-142F-4FDD-8721-BEAFB1530638}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Products", "Products", "{DE05C5D7-43BA-4E67-8631-5C10C4D1CBCB}"
 EndProject
@@ -32,6 +32,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{8536DBCC-92FF-41A1-B8A4-9678E57F7944}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "YarpApiGateway", "YarpApiGateway", "{AD8D93FF-700B-4E55-93E1-797BF055E506}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YarpApiGateway", "ApiGateways\YarpApiGateway\YarpApiGateway.csproj", "{2666D309-C0DD-4AFD-B578-DF5B51476F9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{4106CF15-BBC4-4A45-9239-C8F36EB44538}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4106CF15-BBC4-4A45-9239-C8F36EB44538}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4106CF15-BBC4-4A45-9239-C8F36EB44538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2666D309-C0DD-4AFD-B578-DF5B51476F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2666D309-C0DD-4AFD-B578-DF5B51476F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2666D309-C0DD-4AFD-B578-DF5B51476F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2666D309-C0DD-4AFD-B578-DF5B51476F9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{E6B5E5C9-142F-4FDD-8721-BEAFB1530638} = {408147AE-7691-486A-AA50-EAB04DCBCE3C}
 		{DE05C5D7-43BA-4E67-8631-5C10C4D1CBCB} = {408147AE-7691-486A-AA50-EAB04DCBCE3C}
 		{AD8D93FF-700B-4E55-93E1-797BF055E506} = {8536DBCC-92FF-41A1-B8A4-9678E57F7944}
+		{2666D309-C0DD-4AFD-B578-DF5B51476F9F} = {AD8D93FF-700B-4E55-93E1-797BF055E506}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {458131FF-7FB4-40E3-AFEE-458CE8239633}
