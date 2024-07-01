@@ -2,12 +2,9 @@
 
 namespace Admin.Services;
 
-public sealed class ServiceManager(Lazy<IServiceSecurity> serviceSecurity,
-                                   Lazy<IServiceProducts> serviceProducts) : IServiceManager
+public sealed class ServiceManager(Lazy<IServiceSecurity> serviceSecurity) : IServiceManager
 {
-    public IServiceSecurity ServiceSecurity => this.serviceSecurity.Value;
-    public IServiceProducts ServiceProducts => this.serviceProducts.Value;    
+    public IServiceSecurity ServiceSecurity => this.serviceSecurity.Value;    
 
-    private readonly Lazy<IServiceSecurity> serviceSecurity = serviceSecurity;
-    private readonly Lazy<IServiceProducts> serviceProducts = serviceProducts;
+    private readonly Lazy<IServiceSecurity> serviceSecurity = serviceSecurity;    
 }

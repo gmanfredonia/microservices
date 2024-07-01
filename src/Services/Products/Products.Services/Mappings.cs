@@ -4,9 +4,9 @@ using Mapster;
 
 namespace Admin.Services;
 
-public static class MappingConfig
+public static class Mappings
 {
-    public static void RegisterMappings()
+    public static void Register()
     {
         TypeAdapterConfig<Product, DTOProduct>.NewConfig()
                 .NameMatchingStrategy(NameMatchingStrategy.ConvertDestinationMemberName(name => "Prd" + name))

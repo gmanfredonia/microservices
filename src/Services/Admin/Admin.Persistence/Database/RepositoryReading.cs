@@ -7,10 +7,10 @@ namespace Admin.Persistence.Database;
 
 public sealed class RepositoryReading<TDBContext>(IServiceProvider serviceProvider) : IRepositoryReading where TDBContext : DbContext
 {
-    public IRepositoryProducts ProductsGetInstance()
+    public IRepositoryUsers UsersGetInstance()
     {
         TDBContext dbContext = ActivatorUtilities.CreateInstance<TDBContext>(serviceProvider);
-        return ActivatorUtilities.CreateInstance<RepositoryProducts>(serviceProvider, dbContext);
+        return ActivatorUtilities.CreateInstance<RepositoryUsers>(serviceProvider, dbContext);
     }
 
     private readonly IServiceProvider serviceProvider = serviceProvider;

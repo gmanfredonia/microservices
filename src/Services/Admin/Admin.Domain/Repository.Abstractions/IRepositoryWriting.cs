@@ -2,5 +2,5 @@
 
 public interface IRepositoryWriting : IUnitOfWork
 {
-    IRepositoryProducts Products { get; }
+    IRepositoryUsers Users { get; }
 }

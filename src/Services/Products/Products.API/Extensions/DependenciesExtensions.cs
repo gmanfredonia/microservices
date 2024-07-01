@@ -115,7 +115,7 @@ public static class DependenciesExtensions
     {
         services.AddSingleton(TypeAdapterConfig.GlobalSettings);
         services.AddScoped<IMapper, ServiceMapper>();
-        MappingConfig.RegisterMappings();
+        Mappings.Register();
     }
     public static void AddCustomServices(this IServiceCollection services)
     {

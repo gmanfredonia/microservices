@@ -15,7 +15,7 @@ using System.Text;
 namespace Admin.Services;
 
 [AllowAnonymous]
-public sealed class ServiceSecurity(IConfiguration configuration, ILogger<ServiceProducts> logger, IMapper mapper, IStringLocalizer localizer,
+public sealed class ServiceSecurity(IConfiguration configuration, ILogger<ServiceSecurity> logger, IMapper mapper, IStringLocalizer localizer,
                                     IRepositoryManager repositoryManager) : ServiceBase(configuration, logger, mapper, localizer), IServiceSecurity
 {
     public async Task<DTOToken> CreateTokenAsync(DTOLogin user)
