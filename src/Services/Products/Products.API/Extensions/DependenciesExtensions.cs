@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Products.Persistence.Database;
+using Products.Persistence.Database.RateIt;
 using Products.Services;
 using Products.Services.Abstractions;
 using System.Text;

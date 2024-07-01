@@ -1,5 +1,4 @@
 ﻿using Admin.Domain.Contracts.Products;
-using Admin.Domain.Entities;
 using Admin.Domain.Repository.Abstractions;
 using Building.Base.DTOs;
 using Building.Base.Exceptions;
@@ -8,6 +7,7 @@ using MapsterMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
+using Products.Domain.Entities;
 using Products.Services.Abstractions;
 
 namespace Products.Services;

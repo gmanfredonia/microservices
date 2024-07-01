@@ -11,7 +11,7 @@ public partial class ProfilesUser
 
     public int UsrId { get; set; }
 
-    public DateTime PruInsertDate { get; set; }
+    public DateOnly PruInsertDate { get; set; }
 
     public bool PruEnabled { get; set; }
 

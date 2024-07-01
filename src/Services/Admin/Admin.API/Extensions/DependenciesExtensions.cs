@@ -1,6 +1,7 @@
 ﻿using Admin.Domain.Contracts;
 using Admin.Domain.Repository.Abstractions;
 using Admin.Persistence.Database;
+using Admin.Persistence.Database.RateIt;
 using Admin.Services;
 using Admin.Services.Abstractions;
 using BuildingBase.Exceptions;

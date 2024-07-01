@@ -2,7 +2,7 @@ using Admin.API.Extensions;
 using Admin.Domain.Contracts.Products;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using Products.Persistence.Database;
+using Products.Persistence.Database.RateIt;
 using Products.Services.Abstractions;
 
 var builder = WebApplication.CreateBuilder(args);

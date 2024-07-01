@@ -11,11 +11,11 @@ public partial class Role
 
     public string RolCategory { get; set; }
 
-    public DateTime RolInsertDate { get; set; }
+    public DateOnly RolInsertDate { get; set; }
 
-    public DateTime? RolLastUpdate { get; set; }
+    public DateOnly? RolLastUpdate { get; set; }
 
-    public DateTime RolValidFrom { get; set; }
+    public DateOnly RolValidFrom { get; set; }
 
     public bool RolEnabled { get; set; }
 

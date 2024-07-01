@@ -1,6 +1,6 @@
 ﻿using Admin.Domain.Contracts.Products;
-using Admin.Domain.Entities;
 using Mapster;
+using Products.Domain.Entities;
 
 namespace Products.Services;
 

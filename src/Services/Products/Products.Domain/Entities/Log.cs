@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Admin.Domain.Entities;
+namespace Products.Domain.Entities;
 
 public partial class Log
 {

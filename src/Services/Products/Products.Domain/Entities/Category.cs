@@ -1,4 +1,7 @@
-﻿namespace Admin.Domain.Entities;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Products.Domain.Entities;
 
 public partial class Category
 {
@@ -6,11 +9,11 @@ public partial class Category
 
     public string CatName { get; set; }
 
-    public DateTime CatInsertDate { get; set; }
+    public DateOnly CatInsertDate { get; set; }
 
-    public DateTime? CatLastUpdate { get; set; }
+    public DateOnly? CatLastUpdate { get; set; }
 
-    public DateTime CatValidFrom { get; set; }
+    public DateOnly CatValidFrom { get; set; }
 
     public bool CatEnabled { get; set; }
 

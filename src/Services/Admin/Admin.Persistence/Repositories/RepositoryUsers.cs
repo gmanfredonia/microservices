@@ -1,6 +1,7 @@
 ﻿using Admin.Domain.Contracts;
 using Admin.Domain.Entities;
 using Admin.Domain.Repository.Abstractions;
+using Admin.Persistence.Database.RateIt;
 using Microsoft.Extensions.Logging;
 
 namespace Admin.Persistence.Database.Repositories;

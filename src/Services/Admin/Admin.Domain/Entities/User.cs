@@ -11,17 +11,15 @@ public partial class User
 
     public string UsrPassword { get; set; }
 
-    public string UsrDescription { get; set; }
+    public DateOnly UsrInsertDate { get; set; }
 
-    public DateTime UsrInsertDate { get; set; }
+    public DateOnly? UsrLastUpdate { get; set; }
 
-    public DateTime? UsrLastUpdate { get; set; }
-
-    public DateTime UsrValidFrom { get; set; }
+    public DateOnly UsrValidFrom { get; set; }
 
     public bool UsrEnabled { get; set; }
 
-    public virtual ICollection<ProfilesUser> ProfilesUsers { get; set; } = new List<ProfilesUser>();
+    public string UsrDescription { get; set; }
 
-    public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
+    public virtual ICollection<ProfilesUser> ProfilesUsers { get; set; } = new List<ProfilesUser>();
 }

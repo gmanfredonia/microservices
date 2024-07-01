@@ -1,19 +1,20 @@
+$projectSuffix = 'Products'
 $projectBasePath = $args[0]
-$projectFullPath = -join($projectBasePath, '\Persistence')
+$projectFullPath = -join($projectBasePath, '\' + $projectSuffix + '.Persistence')
 $contextFullPath = -join($projectFullPath, '\Database')
-$entitiesSourceFullPath = -join($projectBasePath, '\Persistence\Entities')
-$entitiesFolderFullPath = -join($projectBasePath, '\Domain\Entities')
-$entitiesDestinationFullPath = -join($projectBasePath, '\Domain')
+$entitiesSourceFullPath = -join($projectBasePath, '\' + $projectSuffix + '.Persistence\Entities')
+$entitiesFolderFullPath = -join($projectBasePath, '\' + $projectSuffix + '.Domain\Entities')
+$entitiesDestinationFullPath = -join($projectBasePath, '\' + $projectSuffix + '.Domain')
 $dbContextName = 'DbContextRateIt'
-$namespaceDBContext = 'Persistence.Database.RateIt'
-$namespaceEntities = 'Domain.Entities'
+$namespaceDBContext = $projectSuffix + '.Persistence.Database.RateIt'
+$namespaceEntities = $projectSuffix + '.Domain.Entities'
 
 Write-Host 
 Write-Host 'Scaffolding started!'
 
 try {
-    #dotnet ef dbcontext scaffold "Server=.\SQLEXPRESS;Initial Catalog=RateIt;Trusted_Connection=true;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer `
-    dotnet ef dbcontext scaffold "Server=tcp:rateitserver.database.windows.net,1433;Initial Catalog=rateit;Persist Security Info=False;User ID=gmanfredonia;Password=Giangi1974_;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" Microsoft.EntityFrameworkCore.SqlServer `
+#dotnet ef dbcontext scaffold "Server=tcp:rateitserver.database.windows.net,1433;Initial Catalog=rateit;Persist Security Info=False;User ID=gmanfredonia;Password=Giangi1974_;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" Microsoft.EntityFrameworkCore.SqlServer `    
+dotnet ef dbcontext scaffold "Server=.\SQLEXPRESS;Initial Catalog=RateIt;Trusted_Connection=true;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer `
                                  -p $projectFullPath `
                                  -c $dbContextName `
                                  --context-dir $contextFullPath `
@@ -21,7 +22,7 @@ try {
                                  -o Entities `
                                  --namespace $namespaceEntities `
                                  --no-onconfiguring -f --no-build `
-                                  -t Categories -t Log -t Menu -t Products -t Products -t ProfilesMenu -t ProfilesUsers -t Rating -t Roles -t Stores -t Users
+                                 -t Log -t Categories -t Products
 
     Write-Host 'Scaffolding finished!'
     Write-Host 'Move entities started!'

@@ -11,7 +11,7 @@ public partial class ProfilesMenu
 
     public int MnuId { get; set; }
 
-    public DateTime PrmInsertDate { get; set; }
+    public DateOnly PrmInsertDate { get; set; }
 
     public bool PrmEnabled { get; set; }
 

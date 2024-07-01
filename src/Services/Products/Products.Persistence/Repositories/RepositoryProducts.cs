@@ -1,10 +1,11 @@
 ﻿using Admin.Domain.Contracts.Products;
-using Admin.Domain.Entities;
 using Admin.Domain.Repository.Abstractions;
 using Building.Base.DTOs;
 using LinqKit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Products.Domain.Entities;
+using Products.Persistence.Database.RateIt;
 
 namespace Products.Persistence.Database.Repositories;
 

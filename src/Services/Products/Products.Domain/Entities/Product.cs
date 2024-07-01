@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Admin.Domain.Entities;
+namespace Products.Domain.Entities;
 
 public partial class Product
 {
@@ -11,11 +11,17 @@ public partial class Product
 
     public string PrdDescription { get; set; }
 
-    public int CatId { get; set; }
+    public double? PrdHeight { get; set; }
 
-    public string PrdImage { get; set; }
+    public double? PrdWidth { get; set; }
 
-    public string PrdThumbnail { get; set; }
+    public double? PrdDepth { get; set; }
+
+    public decimal PrdPrice { get; set; }
+
+    public bool PrdEnabled { get; set; }
+
+    public string PrdUseType { get; set; }
 
     public DateTime PrdInsertDate { get; set; }
 
@@ -23,9 +29,11 @@ public partial class Product
 
     public DateTime PrdValidFrom { get; set; }
 
-    public bool PrdEnabled { get; set; }
+    public int CatId { get; set; }
+
+    public string PrdImage { get; set; }
+
+    public string PrdThumbnail { get; set; }
 
     public virtual Category Cat { get; set; }
-
-    public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
 }

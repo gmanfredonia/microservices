@@ -1,6 +1,6 @@
 using Admin.API.Extensions;
 using Admin.Domain.Contracts;
-using Admin.Persistence.Database;
+using Admin.Persistence.Database.RateIt;
 using Admin.Services.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
