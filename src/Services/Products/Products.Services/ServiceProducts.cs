@@ -1,17 +1,16 @@
-﻿
-using Admin.Domain.Contracts.Base;
-using Admin.Domain.Contracts.Products;
+﻿using Admin.Domain.Contracts.Products;
 using Admin.Domain.Entities;
 using Admin.Domain.Repository.Abstractions;
-using Admin.Services.Abstractions;
-using BuildingBase.Exceptions;
+using Building.Base.DTOs;
+using Building.Base.Exceptions;
 using Mapster;
 using MapsterMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
+using Products.Services.Abstractions;
 
-namespace Admin.Services;
+namespace Products.Services;
 
 public sealed class ServiceProducts(IConfiguration configuration, ILogger<ServiceProducts> logger, IMapper mapper, IStringLocalizer localizer,
                                     IRepositoryManager repositoryManager) : ServiceBase(configuration, logger, mapper, localizer), IServiceProducts

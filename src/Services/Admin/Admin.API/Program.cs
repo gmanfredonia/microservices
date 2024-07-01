@@ -1,5 +1,5 @@
 using Admin.API.Extensions;
-using Admin.Domain.Contracts.Security;
+using Admin.Domain.Contracts;
 using Admin.Persistence.Database;
 using Admin.Services.Abstractions;
 using Microsoft.EntityFrameworkCore;
@@ -48,7 +48,7 @@ app.MapPost("/createToken", async (IServiceManager serviceManager, DTOLogin user
     IResult response;
     DTOToken result;
 
-    result = await serviceManager.ServiceSecurity.CreateTokenAsync(user).ConfigureAwait(false);
+    result = await serviceManager.ServiceUsers.CreateTokenAsync(user).ConfigureAwait(false);
     response = Results.Ok(result);
 
     return response;

@@ -1,6 +1,6 @@
 ﻿using Admin.Domain.Repository.Abstractions;
 
-namespace Admin.Persistence.Database;
+namespace Products.Persistence.Database;
 
 public sealed class RepositoryManager(Lazy<IRepositoryReading> repositoryReading, Lazy<IRepositoryWriting> repositoryWriting) : IRepositoryManager
 {

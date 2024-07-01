@@ -1,4 +1,4 @@
-﻿using Admin.Domain.Contracts.Security;
+﻿using Admin.Domain.Contracts;
 using Admin.Domain.Entities;
 
 namespace Admin.Domain.Repository.Abstractions;

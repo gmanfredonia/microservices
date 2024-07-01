@@ -1,19 +1,9 @@
 ﻿using Admin.Domain.Contracts.Products;
-using Admin.Domain.Contracts.Security;
 using FluentValidation;
 using Microsoft.Extensions.Localization;
 
 namespace Admin.API.Extensions
 {
-    public class DTOLoginValidator : AbstractValidator<DTOLogin>
-    {
-        public DTOLoginValidator(IStringLocalizer localizer)
-        {
-            RuleFor(x => x.UserName).NotNull().NotEmpty().WithMessage(localizer["messageRequired"]);
-            RuleFor(x => x.Password).NotNull().NotEmpty().WithMessage(localizer["messageRequired"]);
-        }
-    }
-
     public class DTOProductValidator : AbstractValidator<DTOProduct>
     {
         public DTOProductValidator(IStringLocalizer localizer)

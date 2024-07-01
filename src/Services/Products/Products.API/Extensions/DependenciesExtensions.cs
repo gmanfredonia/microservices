@@ -1,9 +1,5 @@
 ﻿using Admin.Domain.Contracts.Products;
-using Admin.Domain.Contracts.Security;
 using Admin.Domain.Repository.Abstractions;
-using Admin.Persistence.Database;
-using Admin.Services;
-using Admin.Services.Abstractions;
 using BuildingBase.Exceptions;
 using BuildingBase.Middlewares;
 using FluentValidation;
@@ -13,7 +9,9 @@ using MapsterMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.ComponentModel.DataAnnotations;
+using Products.Persistence.Database;
+using Products.Services;
+using Products.Services.Abstractions;
 using System.Text;
 using static DbLogger.DbLoggerExtensions;
 
@@ -39,8 +37,7 @@ public static class DependenciesExtensions
         services.AddLanguage(options => configuration.GetSection(CultureMode.SectionLanguage).Bind(options));
     }
     public static void AddCustomValidation(this IServiceCollection services)
-    {
-        services.AddScoped<IValidator<DTOLogin>, DTOLoginValidator>();
+    {        
         services.AddScoped<IValidator<DTOProduct>, DTOProductValidator>();
     }
     public static void AddCustomAuthentication(this IServiceCollection services, IConfiguration configuration)
@@ -124,10 +121,8 @@ public static class DependenciesExtensions
         services.AddScoped(provider => new Lazy<IRepositoryReading>(() => provider.GetRequiredService<IRepositoryReading>()));
         services.AddScoped(provider => new Lazy<IRepositoryWriting>(() => provider.GetRequiredService<IRepositoryWriting>()));
         services.AddScoped<IRepositoryManager, RepositoryManager>();
-
-        services.AddScoped<IServiceSecurity, ServiceSecurity>();
-        services.AddScoped<IServiceProducts, ServiceProducts>();
-        services.AddScoped(provider => new Lazy<IServiceSecurity>(() => provider.GetRequiredService<IServiceSecurity>()));
+                
+        services.AddScoped<IServiceProducts, ServiceProducts>();        
         services.AddScoped(provider => new Lazy<IServiceProducts>(() => provider.GetRequiredService<IServiceProducts>()));
         services.AddScoped<IServiceManager, ServiceManager>();
     }

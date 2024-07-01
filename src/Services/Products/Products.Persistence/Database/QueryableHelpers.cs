@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Admin.Persistence.Database;
+namespace Products.Persistence.Database;
 
 public static class QueryableHelpers
 {

@@ -1,4 +1,4 @@
-﻿using Admin.Domain.Contracts.Base;
+﻿using Building.Base.DTOs;
 
 namespace Admin.Domain.Contracts.Products;
 

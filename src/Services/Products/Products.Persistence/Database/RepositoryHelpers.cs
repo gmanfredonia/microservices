@@ -1,6 +1,6 @@
-﻿using Admin.Domain.Contracts.Base;
+﻿using Building.Base.DTOs;
 
-namespace Admin.Persistence.Database;
+namespace Products.Persistence.Database;
 
 public static class RepositoryHelpers
 {

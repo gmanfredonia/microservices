@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Shared\BuildingBase\BuildingBase.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Building.Base\Building.Base.csproj" />
     <ProjectReference Include="..\Products.Services.Abstractions\Products.Services.Abstractions.csproj" />
   </ItemGroup>
 

@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.Common;
 using System.Globalization;
 
-namespace Admin.Persistence.Database;
+namespace Products.Persistence.Database;
 
 public abstract class Repository<TContext, TEntity>(TContext dbContext) : RepositoryDisposable<TContext>(dbContext),
                                                                           IRepository<TEntity>

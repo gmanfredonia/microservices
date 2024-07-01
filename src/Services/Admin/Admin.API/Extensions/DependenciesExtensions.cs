@@ -1,4 +1,4 @@
-﻿using Admin.Domain.Contracts.Security;
+﻿using Admin.Domain.Contracts;
 using Admin.Domain.Repository.Abstractions;
 using Admin.Persistence.Database;
 using Admin.Services;
@@ -122,8 +122,8 @@ public static class DependenciesExtensions
         services.AddScoped(provider => new Lazy<IRepositoryWriting>(() => provider.GetRequiredService<IRepositoryWriting>()));
         services.AddScoped<IRepositoryManager, RepositoryManager>();
 
-        services.AddScoped<IServiceSecurity, ServiceSecurity>();        
-        services.AddScoped(provider => new Lazy<IServiceSecurity>(() => provider.GetRequiredService<IServiceSecurity>()));        
+        services.AddScoped<IServiceUsers, ServiceUsers>();        
+        services.AddScoped(provider => new Lazy<IServiceUsers>(() => provider.GetRequiredService<IServiceUsers>()));        
         services.AddScoped<IServiceManager, ServiceManager>();
     }
 }

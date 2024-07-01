@@ -1,6 +1,6 @@
-﻿using Admin.Domain.Contracts.Base;
-using Admin.Domain.Contracts.Products;
+﻿using Admin.Domain.Contracts.Products;
 using Admin.Domain.Entities;
+using Building.Base.DTOs;
 
 namespace Admin.Domain.Repository.Abstractions;
 

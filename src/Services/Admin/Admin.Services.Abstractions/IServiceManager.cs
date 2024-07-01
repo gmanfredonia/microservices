@@ -2,5 +2,5 @@
 
 public interface IServiceManager
 {
-    public IServiceSecurity ServiceSecurity { get; }    
+    public IServiceUsers ServiceUsers { get; }    
 }

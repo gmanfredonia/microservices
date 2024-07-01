@@ -1,7 +1,7 @@
 ﻿using Admin.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Admin.Persistence.Database;
+namespace Products.Persistence.Database;
 
 public partial class DbContextRateIt : DbContext
 {

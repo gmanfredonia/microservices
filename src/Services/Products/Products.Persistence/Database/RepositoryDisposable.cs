@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Admin.Persistence.Database;
+namespace Products.Persistence.Database;
 
 public abstract class RepositoryDisposable<TContext>(TContext dbContext) : IAsyncDisposable, IDisposable where TContext : DbContext
 {

@@ -1,12 +1,12 @@
-﻿using Admin.Domain.Contracts.Base;
-using Admin.Domain.Contracts.Products;
+﻿using Admin.Domain.Contracts.Products;
 using Admin.Domain.Entities;
 using Admin.Domain.Repository.Abstractions;
+using Building.Base.DTOs;
 using LinqKit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace Admin.Persistence.Database.Repositories;
+namespace Products.Persistence.Database.Repositories;
 
 public sealed class RepositoryProducts(DbContextRateIt dbContext, ILogger<RepositoryProducts> logger) : Repository<DbContextRateIt, Product>(dbContext), IRepositoryProducts
 {

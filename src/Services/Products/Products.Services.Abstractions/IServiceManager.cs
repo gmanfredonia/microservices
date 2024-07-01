@@ -1,7 +1,6 @@
-﻿namespace Admin.Services.Abstractions;
+﻿namespace Products.Services.Abstractions;
 
 public interface IServiceManager
-{
-    public IServiceSecurity ServiceSecurity { get; }
+{    
     public IServiceProducts ServiceProducts { get; }
 }

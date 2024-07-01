@@ -1,5 +1,5 @@
 ﻿
-using Admin.Domain.Contracts.Security;
+using Admin.Domain.Contracts;
 using FluentValidation;
 using Microsoft.Extensions.Localization;
 

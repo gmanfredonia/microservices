@@ -2,7 +2,7 @@
 using Admin.Domain.Entities;
 using Mapster;
 
-namespace Admin.Services;
+namespace Products.Services;
 
 public static class Mappings
 {

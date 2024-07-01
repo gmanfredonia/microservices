@@ -1,4 +1,4 @@
-﻿using Admin.Domain.Contracts.Security;
+﻿using Admin.Domain.Contracts;
 using Admin.Domain.Entities;
 using Admin.Domain.Repository.Abstractions;
 using Microsoft.Extensions.Logging;

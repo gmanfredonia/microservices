@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Admin.Persistence.Database;
+namespace Products.Persistence.Database;
 
 public abstract class UnitOfWork<TContext>(TContext dbContext) : RepositoryDisposable<TContext>(dbContext), IUnitOfWork where TContext : DbContext
 {

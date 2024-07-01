@@ -1,7 +1,7 @@
-﻿using Admin.Domain.Contracts.Base;
-using Admin.Domain.Contracts.Products;
+﻿using Admin.Domain.Contracts.Products;
+using Building.Base.DTOs;
 
-namespace Admin.Services.Abstractions;
+namespace Products.Services.Abstractions;
 
 public interface IServiceProducts
 {

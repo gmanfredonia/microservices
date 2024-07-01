@@ -1,7 +1,7 @@
-﻿using Admin.Domain.Contracts.Security;
+﻿using Admin.Domain.Contracts;
 using Admin.Domain.Repository.Abstractions;
 using Admin.Services.Abstractions;
-using BuildingBase.Exceptions;
+using Building.Base.Exceptions;
 using MapsterMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
@@ -15,8 +15,8 @@ using System.Text;
 namespace Admin.Services;
 
 [AllowAnonymous]
-public sealed class ServiceSecurity(IConfiguration configuration, ILogger<ServiceSecurity> logger, IMapper mapper, IStringLocalizer localizer,
-                                    IRepositoryManager repositoryManager) : ServiceBase(configuration, logger, mapper, localizer), IServiceSecurity
+public sealed class ServiceUsers(IConfiguration configuration, ILogger<ServiceUsers> logger, IMapper mapper, IStringLocalizer localizer,
+                                    IRepositoryManager repositoryManager) : ServiceBase(configuration, logger, mapper, localizer), IServiceUsers
 {
     public async Task<DTOToken> CreateTokenAsync(DTOLogin user)
     {

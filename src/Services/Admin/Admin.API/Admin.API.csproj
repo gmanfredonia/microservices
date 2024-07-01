@@ -20,9 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Building.Base\Building.Base.csproj" />
     <ProjectReference Include="..\..\..\Shared\DbLogger\DbLogger.csproj" />
     <ProjectReference Include="..\..\..\Shared\Localization\Localization.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\BuildingBase\BuildingBase.csproj" />
+	  <ProjectReference Include="..\..\..\Shared\Building.API\Building.API.csproj" />
 	  <ProjectReference Include="..\..\..\Shared\Resources\Resources.csproj" />
     <ProjectReference Include="..\Admin.Persistence\Admin.Persistence.csproj" />
     <ProjectReference Include="..\Admin.Services\Admin.Services.csproj" />

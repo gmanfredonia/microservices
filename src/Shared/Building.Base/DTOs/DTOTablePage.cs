@@ -1,4 +1,4 @@
-﻿namespace Admin.Domain.Contracts.Base;
+﻿namespace Building.Base.DTOs;
 
 public class DTOTablePage<TRow>
 {

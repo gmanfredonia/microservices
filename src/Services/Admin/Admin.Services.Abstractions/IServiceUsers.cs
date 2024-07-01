@@ -1,8 +1,8 @@
-﻿using Admin.Domain.Contracts.Security;
+﻿using Admin.Domain.Contracts;
 
 namespace Admin.Services.Abstractions;
 
-public interface IServiceSecurity
+public interface IServiceUsers
 {
     public Task<DTOToken> CreateTokenAsync(DTOLogin user);
 }

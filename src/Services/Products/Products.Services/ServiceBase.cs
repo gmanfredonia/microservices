@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 
-namespace Admin.Services;
+namespace Products.Services;
 
 public abstract class ServiceBase(IConfiguration configuration, ILogger<ServiceBase> logger, IMapper mapper, IStringLocalizer localizer)
 {
