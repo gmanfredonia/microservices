@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCustomExceptionHandler();
 builder.Services.AddCustomLocalization(builder.Configuration);
+builder.Services.AddCustomValidation();
 builder.Services.AddCustomAuthentication(builder.Configuration);
 builder.Services.AddCustomSwagger();
 builder.Services.AddCustomMapster();

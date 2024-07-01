@@ -1,15 +1,19 @@
-﻿using Admin.Domain.Repository.Abstractions;
+﻿using Admin.Domain.Contracts.Products;
+using Admin.Domain.Contracts.Security;
+using Admin.Domain.Repository.Abstractions;
 using Admin.Persistence.Database;
 using Admin.Services;
 using Admin.Services.Abstractions;
 using BuildingBase.Exceptions;
 using BuildingBase.Middlewares;
+using FluentValidation;
 using Localization;
 using Mapster;
 using MapsterMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using static DbLogger.DbLoggerExtensions;
 
@@ -33,6 +37,11 @@ public static class DependenciesExtensions
     {
         LocalizationExtensions.AddLocalization(services);
         services.AddLanguage(options => configuration.GetSection(CultureMode.SectionLanguage).Bind(options));
+    }
+    public static void AddCustomValidation(this IServiceCollection services)
+    {
+        services.AddScoped<IValidator<DTOLogin>, DTOLoginValidator>();
+        services.AddScoped<IValidator<DTOProduct>, DTOProductValidator>();
     }
     public static void AddCustomAuthentication(this IServiceCollection services, IConfiguration configuration)
     {
@@ -62,7 +71,6 @@ public static class DependenciesExtensions
             };
         });
     }
-
     public static void AddCustomLogging(this ILoggingBuilder logging, IConfiguration configuration)
     {
         logging.ClearProviders();
@@ -103,14 +111,12 @@ public static class DependenciesExtensions
             });
         });
     }
-
     public static void AddCustomMapster(this IServiceCollection services)
     {
         services.AddSingleton(TypeAdapterConfig.GlobalSettings);
         services.AddScoped<IMapper, ServiceMapper>();
         MappingConfig.RegisterMappings();
     }
-
     public static void AddCustomServices(this IServiceCollection services)
     {
         services.AddScoped<IRepositoryReading, RepositoryReading<DbContextRateIt>>();
